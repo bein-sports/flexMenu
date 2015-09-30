@@ -21,7 +21,7 @@
 		if ($(window).width() !== windowWidth || $(window).height() !== windowHeight) {
 			$(flexObjects).each(function () {
 				$(this).flexMenu({
-					'undo' : true
+					'undo' : false
 				}).flexMenu(this.options);
 			});
 			windowWidth = $(window).width(); // Store the window width if it changed
