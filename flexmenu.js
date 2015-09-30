@@ -18,7 +18,7 @@
 	function adjustFlexMenu() {
 		$(flexObjects).each(function () {
 			$(this).flexMenu({
-				'undo' : true
+				'undo' : false
 			}).flexMenu(this.options);
 		});
 	}
