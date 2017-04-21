@@ -111,7 +111,8 @@
 				}
 				$moreItem = $this.find('> li.flexMenu-viewMore');
 				/// Check to see whether the more link has been pushed down. This might happen if the link immediately before it is especially wide.
-				if (needsMenu($moreItem)) {
+				// @frboi nota: in some rare case, the last Item doesn't need to be in menu but push down the more button even after the append, so let's be sure and do a while loop
+				while (needsMenu($moreItem)) {
 					$this.find('> li:nth-last-child(2)').appendTo($popup);
 				}
 				// Our popup menu is currently in reverse order. Let's fix that.
